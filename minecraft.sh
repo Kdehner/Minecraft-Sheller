@@ -12,19 +12,19 @@ CONFIG_PATH=/home/minecraft/minecraft-Sheller
 
 #	Configuration
 # Main
-MC_PATH=/home/minecraft
+MC_PATH=/home/lostcraft/minecraft/server
 SERVER_PATH=""
 ONLINE_PATH=$MC_PATH/$SERVER_PATH
 OFFLINE_PATH=$MC_PATH/offline
 USE_RAMDISK=0
 RAMDISK_PATH=/dev/shm/
-SCREEN_NAME="minecraft"
+SCREEN_NAME="lostcraft"
 MEMMAX=1536
-DISPLAY_ON_LAUNCH=0
+DISPLAY_ON_LAUNCH=1
 SERVER_OPTIONS=""
 
 # Modifications
-SERVERMOD=1
+SERVERMOD=0
 MODJAR="craftbukkit-0.0.1-SNAPSHOT.jar"
 RUNECRAFT=1
 MCMYADMIN=0
@@ -35,11 +35,11 @@ BKUP_PATH=$MC_PATH/backup
 BKUP_DAYS_INCR=2
 BKUP_DAYS_FULL=5
 
-ALT_BACKUP=1
+ALT_BACKUP=0
 ALT_PATH=$MC_PATH/plugins
 
 # Logs
-LOG_TDIR=/var/www/minecraft/logs
+LOG_TDIR=$MC_PATH/backup/logs
 LOGS_DAYS=14
 
 # Mapping
@@ -50,9 +50,9 @@ CARTO_OPTIONS_NETHER="-N --hell-mode"
 BIOME_PATH=/home/minecraft/BiomeExtractor
 MAP_CHANGES=1
 
-MCOVERVIEWER_PATH=$MC_PATH/Overviewer
-MCOVERVIEWER_MAPS_PATH=/var/www/minecraft/maps/Overview
-MCOVERVIEWER_OPTIONS="--rendermodes=lighting,night"
+MCOVERVIEWER_PATH=/home/kevbot/minecraft/Minecraft-Overviewer
+MCOVERVIEWER_MAPS_PATH=/home/kevbot/minecraft/maps
+MCOVERVIEWER_OPTIONS="--cachedir=/home/lostcraft/minecraft/maps/cache --config=/home/lostcraft/minecraft/maps/config.py"
 
 # 	End of configuration
 [ -f $CONFIG_PATH/config.sh ] && source $CONFIG_PATH/config.sh
