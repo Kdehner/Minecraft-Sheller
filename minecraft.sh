@@ -464,10 +464,10 @@ if [[ $# -gt 0 ]]; then
     					# Remove full archives older than $BKUP_DAYS_FULL
     					touch purgelist
 						if [[ -e echo $BKUP_PATH/$WORLD/*-incr.tgz | cut -d " " -f1 ]]; then
-							find $WORLD/_-incr.tgz -type f -mtime +$BKUP_DAYS_INCR -print > purgelist
+						find $WORLD/_-incr.tgz -type f -mtime +$BKUP_DAYS_INCR -print > purgelist
 						fi
 						if [[ -e echo $BKUP_PATH/$WORLD/_-full.tgz | cut -d " " -f1 ]]; then
-							find $WORLD/*-full.tgz -type f -mtime +$BKUP_DAYS_FULL -print >> purgelist
+						find $WORLD/*-full.tgz -type f -mtime +$BKUP_DAYS_FULL -print >> purgelist
 						fi
     					rm -f $(cat purgelist) purgelist
 
